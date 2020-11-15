@@ -1,9 +1,11 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    target="_blank"
+    v-bind:tag="isVueLink ? 'router-link' : 'a'"
+    v-bind:target=" newTab ? '_blank' : ''"
     :href="link"
+    :to="link"
+    exact
   >
     <q-item-section
       v-if="icon"
@@ -43,6 +45,14 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    isVueLink: {
+      type: Boolean,
+      default: true
+    },
+    newTab: {
+      type: Boolean,
+      default: false
     }
   }
 }
