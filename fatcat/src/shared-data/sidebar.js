@@ -1,7 +1,7 @@
 const sidebar = [
   {
     title: 'Home',
-    caption: 'Homepage',
+    caption: '',
     icon: 'house',
     link: '/',
     isVueLink: true,
@@ -9,9 +9,25 @@ const sidebar = [
   },
   {
     title: 'Images',
-    caption: 'All images',
+    caption: '',
     icon: 'image',
     link: '/images',
+    isVueLink: true,
+    newTab: false
+  },
+  {
+    title: 'Albums',
+    caption: '',
+    icon: 'photo_album',
+    link: '/albums',
+    isVueLink: true,
+    newTab: false
+  },
+  {
+    title: 'Create Poster',
+    caption: '',
+    icon: 'create',
+    link: '/posters/create-poster',
     isVueLink: true,
     newTab: false
   },
